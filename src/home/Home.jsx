@@ -142,9 +142,11 @@ const Home = () => {
           </div>
           <div className="p-4 bg-white text-center">
             <h2 className="text-lg font-semibold mb-2">{product.name}</h2>
-            <p className="text-gray-600 font-bold text-xl">
-              ${product.price.toFixed(2)}
-            </p>
+            <div className="mt-2">
+              <p>Size: {product.defaultSize}</p>
+              
+            </div>
+            <p className="text-gray-600 font-bold text-3xl">${product.price.toFixed(2)}</p>
             <div className="mt-4 w-full flex justify-center gap-5">
               <Button size="sm" onClick={() => handleCompareClick(product)}>
                 Compare
@@ -158,6 +160,7 @@ const Home = () => {
       )),
     [handleMagicFitClick, handleCompareClick, handleAddToCart]
   );
+  
 
 
   const compareWithSelected = useCallback((collectionItem) => {
