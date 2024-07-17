@@ -7,11 +7,9 @@ const products = [
     price: 19.99,
     sizes: {
       S: { chest: 91, neck: 39, shoulder: 46, waist: 76, armLength: 58 },
-      M: { chest: 96, neck: 40, shoulder: 47, waist: 81, armLength: 59 },
-      L: { chest: 101, neck: 41, shoulder: 48, waist: 86, armLength: 60 },
-      XL: { chest: 106, neck: 42, shoulder: 49, waist: 91, armLength: 61 },
-      XXL: { chest: 111, neck: 43, shoulder: 50, waist: 96, armLength: 62 },
     },
+    defaultSize: "S",
+
     fitPreference: ["Regular", "Slim"],
   },
   {
@@ -21,12 +19,10 @@ const products = [
       "https://www.jiomart.com/images/product/original/rvdlikzxjb/18-_024_denim-shirt-men-s-denim-cutaway-collar-slim-fit-half-sleeve-casual-shirt-blue-3x-large-product-images-rvdlikzxjb-0-202303110647.jpg?im=Resize=(600,750)",
     price: 39.99,
     sizes: {
-      S: { chest: 92, neck: 39.5, shoulder: 45, waist: 77, armLength: 58 },
       M: { chest: 97, neck: 40.5, shoulder: 46, waist: 82, armLength: 59 },
-      L: { chest: 102, neck: 41.5, shoulder: 47, waist: 87, armLength: 60 },
-      XL: { chest: 107, neck: 42.5, shoulder: 48, waist: 92, armLength: 61 },
-      XXL: { chest: 112, neck: 43.5, shoulder: 49, waist: 97, armLength: 62 },
     },
+    defaultSize: "M",
+
     fitPreference: ["Regular", "Slim", "Relaxed"],
   },
   {
@@ -37,11 +33,9 @@ const products = [
     price: 24.99,
     sizes: {
       S: { chest: 90, neck: 38, shoulder: 45, waist: 75, armLength: 57 },
-      M: { chest: 95, neck: 39, shoulder: 46, waist: 80, armLength: 58 },
-      L: { chest: 100, neck: 40, shoulder: 47, waist: 85, armLength: 59 },
-      XL: { chest: 105, neck: 41, shoulder: 48, waist: 90, armLength: 60 },
-      XXL: { chest: 110, neck: 42, shoulder: 49, waist: 95, armLength: 61 },
     },
+    defaultSize: "S",
+
     fitPreference: ["Regular", "Slim"],
   },
   {
@@ -50,12 +44,10 @@ const products = [
     image: "https://m.media-amazon.com/images/I/814dW847ykL._SY550_.jpg",
     price: 29.99,
     sizes: {
-      S: { chest: 91, neck: 39, shoulder: 46, waist: 76, armLength: 28 },
-      M: { chest: 96, neck: 40, shoulder: 47, waist: 81, armLength: 29 },
-      L: { chest: 101, neck: 41, shoulder: 48, waist: 86, armLength: 30 },
-      XL: { chest: 106, neck: 42, shoulder: 49, waist: 91, armLength: 31 },
       XXL: { chest: 111, neck: 43, shoulder: 50, waist: 96, armLength: 32 },
     },
+    defaultSize: "XXL",
+
     fitPreference: ["Regular", "Slim", "Relaxed"],
   },
   {
@@ -64,12 +56,10 @@ const products = [
     image: "https://m.media-amazon.com/images/I/81nKdsCpsTL._SX522_.jpg",
     price: 49.99,
     sizes: {
-      S: { chest: 92, neck: 39, shoulder: 45, waist: 77, armLength: 59 },
-      M: { chest: 97, neck: 40, shoulder: 46, waist: 82, armLength: 60 },
       L: { chest: 102, neck: 41, shoulder: 47, waist: 87, armLength: 61 },
-      XL: { chest: 107, neck: 42, shoulder: 48, waist: 92, armLength: 62 },
-      XXL: { chest: 112, neck: 43, shoulder: 49, waist: 97, armLength: 63 },
     },
+    defaultSize: "L",
+
     fitPreference: ["Regular", "Relaxed"],
   },
   {
@@ -79,12 +69,10 @@ const products = [
       "https://images.bestsellerclothing.in/data/JJ/27-june-2023/255066902_g0.jpg?width=1080&height=1355&mode=fill&fill=blur&format=auto",
     price: 59.99,
     sizes: {
-      S: { chest: 91, neck: 39, shoulder: 46, waist: 76, armLength: 59 },
-      M: { chest: 96, neck: 40, shoulder: 47, waist: 81, armLength: 60 },
-      L: { chest: 101, neck: 41, shoulder: 48, waist: 86, armLength: 61 },
-      XL: { chest: 106, neck: 42, shoulder: 49, waist: 91, armLength: 62 },
       XXL: { chest: 111, neck: 43, shoulder: 50, waist: 96, armLength: 63 },
     },
+    defaultSize: "XXL",
+
     fitPreference: ["Regular", "Slim"],
   },
   {
@@ -95,11 +83,9 @@ const products = [
     price: 34.99,
     sizes: {
       S: { chest: 90, neck: 38, shoulder: 45, waist: 75, armLength: 58 },
-      M: { chest: 95, neck: 39, shoulder: 46, waist: 80, armLength: 59 },
-      L: { chest: 100, neck: 40, shoulder: 47, waist: 85, armLength: 60 },
-      XL: { chest: 105, neck: 41, shoulder: 48, waist: 90, armLength: 61 },
-      XXL: { chest: 110, neck: 42, shoulder: 49, waist: 95, armLength: 62 },
     },
+    defaultSize: "S",
+
     fitPreference: ["Regular", "Relaxed"],
   },
   {
@@ -108,12 +94,10 @@ const products = [
     image: "https://m.media-amazon.com/images/I/51K0XmUVDPL._SX522_.jpg",
     price: 29.99,
     sizes: {
-      S: { chest: 91, neck: 39, shoulder: 46, waist: 76, armLength: 28 },
       M: { chest: 96, neck: 40, shoulder: 47, waist: 81, armLength: 29 },
-      L: { chest: 101, neck: 41, shoulder: 48, waist: 86, armLength: 30 },
-      XL: { chest: 106, neck: 42, shoulder: 49, waist: 91, armLength: 31 },
-      XXL: { chest: 111, neck: 43, shoulder: 50, waist: 96, armLength: 32 },
     },
+    defaultSize: "M",
+
     fitPreference: ["Regular", "Slim"],
   },
   {
@@ -122,12 +106,10 @@ const products = [
     image: "https://m.media-amazon.com/images/I/610N1pajwKL._SX522_.jpg",
     price: 19.99,
     sizes: {
-      S: { chest: 90, neck: 38, shoulder: 45, waist: 75, armLength: 57 },
-      M: { chest: 95, neck: 39, shoulder: 46, waist: 80, armLength: 58 },
-      L: { chest: 100, neck: 40, shoulder: 47, waist: 85, armLength: 59 },
       XL: { chest: 105, neck: 41, shoulder: 48, waist: 90, armLength: 60 },
-      XXL: { chest: 110, neck: 42, shoulder: 49, waist: 95, armLength: 61 },
     },
+    defaultSize: "XL",
+
     fitPreference: ["Regular", "Slim"],
   },
   {
@@ -136,12 +118,10 @@ const products = [
     image: "https://m.media-amazon.com/images/I/61NbaG5eNBL._SX679_.jpg",
     price: 34.99,
     sizes: {
-      S: { chest: 91, neck: 39, shoulder: 46, waist: 76, armLength: 58 },
-      M: { chest: 96, neck: 40, shoulder: 47, waist: 81, armLength: 59 },
-      L: { chest: 101, neck: 41, shoulder: 48, waist: 86, armLength: 60 },
-      XL: { chest: 106, neck: 42, shoulder: 49, waist: 91, armLength: 61 },
       XXL: { chest: 111, neck: 43, shoulder: 50, waist: 96, armLength: 62 },
     },
+    defaultSize: "XXL",
+
     fitPreference: ["Regular", "Slim"],
   },
   {
@@ -150,12 +130,10 @@ const products = [
     image: "https://m.media-amazon.com/images/I/814do9FVbDL._SY679_.jpg",
     price: 39.99,
     sizes: {
-      S: { chest: 92, neck: 39.5, shoulder: 45, waist: 77, armLength: 28 },
-      M: { chest: 97, neck: 40.5, shoulder: 46, waist: 82, armLength: 29 },
-      L: { chest: 102, neck: 41.5, shoulder: 47, waist: 87, armLength: 30 },
-      XL: { chest: 107, neck: 42.5, shoulder: 48, waist: 92, armLength: 31 },
       XXL: { chest: 112, neck: 43.5, shoulder: 49, waist: 97, armLength: 32 },
     },
+    defaultSize: "XXL",
+
     fitPreference: ["Regular", "Relaxed"],
   },
   {
@@ -164,12 +142,10 @@ const products = [
     image: "https://m.media-amazon.com/images/I/61Y7GT5qxuL._SX679_.jpg",
     price: 29.99,
     sizes: {
-      S: { chest: 90, neck: 38, shoulder: 45, waist: 75, armLength: 57 },
       M: { chest: 95, neck: 39, shoulder: 46, waist: 80, armLength: 58 },
-      L: { chest: 100, neck: 40, shoulder: 47, waist: 85, armLength: 59 },
-      XL: { chest: 105, neck: 41, shoulder: 48, waist: 90, armLength: 60 },
-      XXL: { chest: 110, neck: 42, shoulder: 49, waist: 95, armLength: 61 },
     },
+    defaultSize: "M",
+
     fitPreference: ["Slim", "Regular"],
   },
   {
@@ -179,11 +155,9 @@ const products = [
     price: 89.99,
     sizes: {
       S: { chest: 92, neck: 39, shoulder: 45, waist: 77, armLength: 60 },
-      M: { chest: 97, neck: 40, shoulder: 46, waist: 82, armLength: 61 },
-      L: { chest: 102, neck: 41, shoulder: 47, waist: 87, armLength: 62 },
-      XL: { chest: 107, neck: 42, shoulder: 48, waist: 92, armLength: 63 },
-      XXL: { chest: 112, neck: 43, shoulder: 49, waist: 97, armLength: 64 },
     },
+    defaultSize: "S",
+
     fitPreference: ["Regular", "Relaxed"],
   },
   {
@@ -192,12 +166,10 @@ const products = [
     image: "https://m.media-amazon.com/images/I/51gaACg68DL._SY679_.jpg",
     price: 79.99,
     sizes: {
-      S: { chest: 91, neck: 39, shoulder: 46, waist: 76, armLength: 59 },
-      M: { chest: 96, neck: 40, shoulder: 47, waist: 81, armLength: 60 },
-      L: { chest: 101, neck: 41, shoulder: 48, waist: 86, armLength: 61 },
       XL: { chest: 106, neck: 42, shoulder: 49, waist: 91, armLength: 62 },
-      XXL: { chest: 111, neck: 43, shoulder: 50, waist: 96, armLength: 63 },
     },
+    defaultSize: "XL",
+
     fitPreference: ["Regular", "Slim"],
   },
   {
@@ -206,12 +178,10 @@ const products = [
     image: "https://m.media-amazon.com/images/I/61zXf1BClKL._SY679_.jpg",
     price: 69.99,
     sizes: {
-      S: { chest: 90, neck: 38, shoulder: 45, waist: 75, armLength: 58 },
-      M: { chest: 95, neck: 39, shoulder: 46, waist: 80, armLength: 59 },
-      L: { chest: 100, neck: 40, shoulder: 47, waist: 85, armLength: 60 },
-      XL: { chest: 105, neck: 41, shoulder: 48, waist: 90, armLength: 61 },
       XXL: { chest: 110, neck: 42, shoulder: 49, waist: 95, armLength: 62 },
     },
+    defaultSize: "XXL",
+
     fitPreference: ["Regular", "Slim", "Relaxed"],
   },
   {
@@ -221,11 +191,9 @@ const products = [
     price: 29.99,
     sizes: {
       S: { chest: 91, neck: 39, shoulder: 46, waist: 76, armLength: 58 },
-      M: { chest: 96, neck: 40, shoulder: 47, waist: 81, armLength: 59 },
-      L: { chest: 101, neck: 41, shoulder: 48, waist: 86, armLength: 60 },
-      XL: { chest: 106, neck: 42, shoulder: 49, waist: 91, armLength: 61 },
-      XXL: { chest: 111, neck: 43, shoulder: 50, waist: 96, armLength: 62 },
     },
+    defaultSize: "S",
+
     fitPreference: ["Oversized", "Relaxed"],
   },
   {
@@ -234,12 +202,10 @@ const products = [
     image: "https://m.media-amazon.com/images/I/41QcAdFdjtL.jpg",
     price: 49.99,
     sizes: {
-      S: { chest: 92, neck: 39.5, shoulder: 45, waist: 77, armLength: 58 },
       M: { chest: 97, neck: 40.5, shoulder: 46, waist: 82, armLength: 59 },
-      L: { chest: 102, neck: 41.5, shoulder: 47, waist: 87, armLength: 60 },
-      XL: { chest: 107, neck: 42.5, shoulder: 48, waist: 92, armLength: 61 },
-      XXL: { chest: 112, neck: 43.5, shoulder: 49, waist: 97, armLength: 62 },
     },
+    defaultSize: "M",
+
     fitPreference: ["Regular", "Relaxed"],
   },
   {
@@ -248,12 +214,10 @@ const products = [
     image: "https://m.media-amazon.com/images/I/81EHEXU10bL._SY679_.jpg",
     price: 54.99,
     sizes: {
-      S: { chest: 91, neck: 39, shoulder: 46, waist: 76, armLength: 59 },
       M: { chest: 96, neck: 40, shoulder: 47, waist: 81, armLength: 60 },
-      L: { chest: 101, neck: 41, shoulder: 48, waist: 86, armLength: 61 },
-      XL: { chest: 106, neck: 42, shoulder: 49, waist: 91, armLength: 62 },
-      XXL: { chest: 111, neck: 43, shoulder: 50, waist: 96, armLength: 63 },
     },
+    defaultSize: "M",
+
     fitPreference: ["Regular", "Slim"],
   },
   {
@@ -262,12 +226,10 @@ const products = [
     image: "https://m.media-amazon.com/images/I/71-biZIoTkL._SX522_.jpg",
     price: 39.99,
     sizes: {
-      S: { chest: 90, neck: 38, shoulder: 45, waist: 75, armLength: 58 },
       M: { chest: 95, neck: 39, shoulder: 46, waist: 80, armLength: 59 },
-      L: { chest: 100, neck: 40, shoulder: 47, waist: 85, armLength: 60 },
-      XL: { chest: 105, neck: 41, shoulder: 48, waist: 90, armLength: 61 },
-      XXL: { chest: 110, neck: 42, shoulder: 49, waist: 95, armLength: 62 },
     },
+    defaultSize: "M",
+
     fitPreference: ["Relaxed", "Regular"],
   },
   {
@@ -277,11 +239,9 @@ const products = [
     price: 34.99,
     sizes: {
       S: { chest: 92, neck: 39, shoulder: 45, waist: 77, armLength: 57 },
-      M: { chest: 97, neck: 40, shoulder: 46, waist: 82, armLength: 58 },
-      L: { chest: 102, neck: 41, shoulder: 47, waist: 87, armLength: 59 },
-      XL: { chest: 107, neck: 42, shoulder: 48, waist: 92, armLength: 60 },
-      XXL: { chest: 112, neck: 43, shoulder: 49, waist: 97, armLength: 61 },
     },
+    defaultSize: "S",
+
     fitPreference: ["Slim", "Regular"],
   },
 ];

@@ -3,10 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Shirt, ShoppingCart, Menu } from "lucide-react";
 import { UserButton, useUser } from "@clerk/clerk-react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectCartTotalQuantity } from "@/redux/Slices/CartSlice";
 
 function Header() {
   const { user, isSignedIn } = useUser();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const totalQuantity = useSelector(selectCartTotalQuantity);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -23,15 +26,19 @@ function Header() {
           />
         </Link>
 
-        <div className="hidden md:flex gap-10">
-          <div className="flex gap-5">
+        <div className="hidden md:flex gap-5">
             <Link to="/cart">
               <Button
-                className="flex gap-2 hover:bg-gray-200 transition-all hover:text-black"
+                className="flex gap-2 hover:bg-gray-200 transition-all hover:text-black relative"
                 variant="outline"
               >
                 <ShoppingCart />
                 Cart
+                {totalQuantity > 0 && (
+                  <span className="absolute top-0 right-0 mt-[-5px] mr-[-10px] bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">
+                    {totalQuantity}
+                  </span>
+                )}
               </Button>
             </Link>
 
@@ -41,7 +48,6 @@ function Header() {
                 MagicFit
               </Button>
             </Link>
-          </div>
 
           {isSignedIn ? (
             <div className="flex items-center gap-2">
@@ -52,7 +58,7 @@ function Header() {
             </div>
           ) : (
             <Link to={"/auth/sign-in"}>
-              <Button >
+              <Button>
                 Get Started
               </Button>
             </Link>
@@ -74,11 +80,16 @@ function Header() {
           <div className="flex flex-row gap-5">
             <Link to="/cart">
               <Button
-                className="flex gap-2 hover:bg-gray-200 transition-all hover:text-black"
+                className="flex gap-2 hover:bg-gray-200 transition-all hover:text-black relative"
                 variant="outline"
               >
                 <ShoppingCart />
                 Cart
+                {totalQuantity > 0 && (
+                  <span className="absolute top-0 right-0 mt-[-5px] mr-[-10px] bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">
+                    {totalQuantity}
+                  </span>
+                )}
               </Button>
             </Link>
 
@@ -90,20 +101,20 @@ function Header() {
             </Link>
           </div>
 
-            {isSignedIn ? (
-              <div className="flex justify-center items-center text-center gap-2 py-4">
-                <UserButton />
-                <span className="text-gray-800 font-semibold">
-                  {user?.firstName || user?.username}
-                </span>
-              </div>
-            ) : (
-              <Link to={"/auth/sign-in"}>
-                <Button className="bg-blue-600 text-white hover:bg-blue-700 transition duration-200">
-                  Get Started
-                </Button>
-              </Link>
-            )}
+          {isSignedIn ? (
+            <div className="flex justify-center items-center text-center gap-2 py-4">
+              <UserButton />
+              <span className="text-gray-800 font-semibold">
+                {user?.firstName || user?.username}
+              </span>
+            </div>
+          ) : (
+            <Link to={"/auth/sign-in"}>
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 transition duration-200">
+                Get Started
+              </Button>
+            </Link>
+          )}
         </div>
       )}
     </>
