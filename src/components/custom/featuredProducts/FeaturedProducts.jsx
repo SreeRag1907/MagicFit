@@ -49,9 +49,11 @@ function FeaturedProducts() {
                   ${product.price.toFixed(2)}
                 </p>
                 <div className="mt-4 w-full flex justify-center gap-5">
+                  <Link to={`/product-details/${product.id}`}>
                   <Button size="sm" variant="outline">
                     View
                   </Button>
+                  </Link>
                   <Button size="sm" onClick={() => handleAddToCart(product)}>
                     Add to Cart
                   </Button>

@@ -11,6 +11,7 @@ import SignInPage from './auth/sign-in/SignIn.jsx';
 import store from './redux/Store.js'; // Import your Redux store
 import './index.css';
 import Products from './components/custom/products/Products.jsx';
+import ProductDetails from './components/custom/products/ProductDetails.jsx';
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: '/products',
         element: <Products />,
+      },
+      {
+        path: '/product-details/:id',
+        element: <ProductDetails />,
       },
       
     ],

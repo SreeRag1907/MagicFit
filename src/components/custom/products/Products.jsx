@@ -11,6 +11,8 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { addToCart } from "@/redux/Slices/CartSlice";
+import Footer from "../footer/Footer";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const [collections, setCollections] = useState(() => {
@@ -93,11 +95,13 @@ const Products = () => {
           className="relative border rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 cursor-pointer"
         >
           <div className="h-64 overflow-hidden relative">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-full h-full object-contain transition-transform duration-300 ease-in-out"
-            />
+            <Link to={`/product-details/${product.id}`}>
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-full object-contain transition-transform duration-300 ease-in-out"
+              />
+            </Link>
             <div className="absolute top-2 right-2">
               <Button
                 className="bg-gradient-to-r from-pink-500 to-yellow-500 text-white rounded-full p-2 hover:opacity-80"
@@ -319,6 +323,8 @@ const Products = () => {
           </div>
         </DialogContent>
       </Dialog>
+
+      <Footer />
     </div>
   );
 };

@@ -33,18 +33,18 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="/about"
+                  href="/products"
                   className="hover:text-indigo-400 transition-colors"
                 >
-                  About Us
+                  Products
                 </a>
               </li>
               <li>
                 <a
-                  href="/services"
+                  href="/MagicFit"
                   className="hover:text-indigo-400 transition-colors"
                 >
-                  Services
+                  MagicFit
                 </a>
               </li>
               <li>
