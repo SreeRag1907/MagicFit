@@ -227,6 +227,7 @@ const products = [
     price: 39.99,
     sizes: {
       M: { chest: 95, neck: 39, shoulder: 46, waist: 80, armLength: 59 },
+      
     },
     defaultSize: "M",
 

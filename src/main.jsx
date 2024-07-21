@@ -10,6 +10,7 @@ import MagicFit from './components/custom/magicfit/MagicFit.jsx';
 import SignInPage from './auth/sign-in/SignIn.jsx';
 import store from './redux/Store.js'; // Import your Redux store
 import './index.css';
+import Products from './components/custom/products/Products.jsx';
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: '/magicFit',
         element: <MagicFit />,
+      },
+      {
+        path: '/products',
+        element: <Products />,
       },
       
     ],

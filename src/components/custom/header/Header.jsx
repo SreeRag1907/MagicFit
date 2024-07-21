@@ -17,38 +17,44 @@ function Header() {
 
   return (
     <>
-      <div className="flex justify-between items-center p-4 px-5 bg-white shadow-md shadow-pink-500/30 z-10">
-        <Link to={"/"}>
-          <img
-            src="/logo.png"
-            className="w-[200px] h-200px]"
-            alt="Logo"
-          />
+      <div className="flex justify-between items-center p-7 px-5 bg-white shadow-md shadow-pink-500/30 z-10">
+        <Link to="/">
+          <img src="/logo.png" className="w-[200px] h-[50px] object-contain" alt="Logo" />
         </Link>
 
-        <div className="hidden md:flex gap-5">
-            <Link to="/cart">
-              <Button
-                className="flex gap-2 hover:bg-gray-200 transition-all hover:text-black relative"
-                variant="outline"
-              >
-                <ShoppingCart />
-                Cart
-                {totalQuantity > 0 && (
-                  <span className="absolute top-0 right-0 mt-[-5px] mr-[-10px] bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">
-                    {totalQuantity}
-                  </span>
-                )}
-              </Button>
-            </Link>
+        {/* Center menu items */}
+        <div className="hidden md:flex gap-5 items-center">
+          <Link to="/">
+            <h1 className="text-xl hover:border-b-2 transition-all hover:text-black">
+              Home
+            </h1>
+          </Link>
+          <Link to="/products">
+            <h1 className="text-xl hover:border-b-2 transition-all hover:text-black">
+              Products
+            </h1>
+          </Link>
+          <Link to="/magicFit">
+            <Button className="flex gap-2 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white px-4 py-2 rounded-md transform transition-transform hover:scale-105 hover:opacity-90">
+              <Shirt />
+              MagicFit
+            </Button>
+          </Link>
+          <Link to="/cart">
+            <Button className="flex gap-2 hover:bg-gray-200 transition-all hover:text-black relative" variant="outline">
+              <ShoppingCart />
+              Cart
+              {totalQuantity > 0 && (
+                <span className="absolute top-0 right-0 mt-[-5px] mr-[-10px] bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">
+                  {totalQuantity}
+                </span>
+              )}
+            </Button>
+          </Link>
+        </div>
 
-            <Link to="/magicFit">
-              <Button className="flex gap-2 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white px-4 py-2 rounded-md transform transition-transform hover:scale-105 hover:opacity-90">
-                <Shirt />
-                MagicFit
-              </Button>
-            </Link>
-
+        {/* User-related buttons */}
+        <div className="hidden md:flex gap-5 items-center">
           {isSignedIn ? (
             <div className="flex items-center gap-2">
               <UserButton />
@@ -57,19 +63,14 @@ function Header() {
               </span>
             </div>
           ) : (
-            <Link to={"/auth/sign-in"}>
-              <Button>
-                Get Started
-              </Button>
+            <Link to="/auth/sign-in">
+              <Button>Get Started</Button>
             </Link>
           )}
         </div>
 
-        <button
-          className="md:hidden p-2 hover:bg-gray-200 rounded"
-          onClick={toggleMenu}
-          aria-label="Toggle Menu"
-        >
+        {/* Mobile menu toggle button */}
+        <button className="md:hidden p-2 hover:bg-gray-200 rounded" onClick={toggleMenu} aria-label="Toggle Menu">
           <Menu />
         </button>
       </div>
@@ -77,12 +78,15 @@ function Header() {
       {/* Hamburger Menu */}
       {isMenuOpen && (
         <div className="absolute top-16 right-5 bg-white shadow-md rounded-lg p-4 transition-transform duration-300 ease-in-out transform md:hidden">
-          <div className="flex flex-row gap-5">
+          <div className="flex flex-col gap-5">
+            <Link to="/">
+              <Button className="hover:bg-gray-200 transition-all hover:text-black">Home</Button>
+            </Link>
+            <Link to="/products">
+              <Button className="hover:bg-gray-200 transition-all hover:text-black">Products</Button>
+            </Link>
             <Link to="/cart">
-              <Button
-                className="flex gap-2 hover:bg-gray-200 transition-all hover:text-black relative"
-                variant="outline"
-              >
+              <Button className="flex gap-2 hover:bg-gray-200 transition-all hover:text-black relative" variant="outline">
                 <ShoppingCart />
                 Cart
                 {totalQuantity > 0 && (
@@ -92,7 +96,6 @@ function Header() {
                 )}
               </Button>
             </Link>
-
             <Link to="/magicFit">
               <Button className="flex gap-2 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white px-4 py-2 rounded-md transform transition-transform hover:scale-105 hover:opacity-90">
                 <Shirt />
@@ -109,7 +112,7 @@ function Header() {
               </span>
             </div>
           ) : (
-            <Link to={"/auth/sign-in"}>
+            <Link to="/auth/sign-in">
               <Button className="bg-blue-600 text-white hover:bg-blue-700 transition duration-200">
                 Get Started
               </Button>
