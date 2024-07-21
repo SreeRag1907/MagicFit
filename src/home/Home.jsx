@@ -7,6 +7,10 @@ import { Shirt } from "lucide-react";
 import { Link } from "react-router-dom";
 import Products from "@/components/custom/products/Products";
 import FeaturedProducts from "@/components/custom/featuredProducts/FeaturedProducts";
+import Testimonials from "@/components/custom/testimonials/Testimonials";
+import NewsletterSignup from "@/components/custom/newsletter/NewsLetter";
+import Footer from "@/components/custom/footer/Footer";
+import Gallery from "@/components/custom/gallery/Gallery";
 
 const Home = () => {
   
@@ -71,6 +75,9 @@ const Home = () => {
         </div>
       </section>
               <FeaturedProducts/>
+              <Gallery/>
+              <Testimonials/>
+              <Footer/>
       {/* <Products/> */}
     </div>
   );
