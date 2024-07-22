@@ -5,10 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Shirt } from "lucide-react";
 
 import { Link } from "react-router-dom";
-import Products from "@/components/custom/products/Products";
 import FeaturedProducts from "@/components/custom/featuredProducts/FeaturedProducts";
 import Testimonials from "@/components/custom/testimonials/Testimonials";
-import NewsletterSignup from "@/components/custom/newsletter/NewsLetter";
 import Footer from "@/components/custom/footer/Footer";
 import Gallery from "@/components/custom/gallery/Gallery";
 
@@ -40,14 +38,14 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <section className="text-gray-800 body-font bg-gray-50">
+      <section className="text-gray-800 body-font bg-gray-800">
         <div className="container mx-auto flex px-5 md:flex-row flex-col items-center py-12">
           <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start mb-16 md:mb-0 items-center text-center md:text-left">
-            <h1 className="title-font sm:text-6xl text-4xl mb-4 font-extrabold text-gray-900">
+            <h1 className="title-font sm:text-6xl text-4xl mb-4 font-extrabold text-gray-200">
               Discover Your Style with{" "}
               <span className="text-indigo-600">MagicFit</span>
             </h1>
-            <p className="mb-8 leading-relaxed text-lg text-gray-700">
+            <p className="mb-8 leading-relaxed text-lg text-white">
               Explore our exclusive collection of ready-made clothing, designed
               to fit perfectly and keep you looking stylish. From casual wear to
               formal attire, we have something for everyone.
@@ -59,7 +57,7 @@ const Home = () => {
               </Button>
             </Link>
           </div>
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 bg-gray-800 rounded-2xl">
+          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 bg-gray-50 rounded-2xl">
             <div
               className={`relative transition-opacity duration-1000 ${
                 isExiting ? "opacity-0" : "opacity-100"

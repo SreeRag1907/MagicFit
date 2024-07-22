@@ -8,15 +8,17 @@ function Footer() {
         <div className="flex flex-wrap justify-between gap-8 mb-8">
           {/* Company Info Section */}
           <div className="w-full md:w-1/3 mb-8 md:mb-0">
-            <h2 className="text-xl font-semibold text-white mb-4">
-              Company Name
-            </h2>
+            <h2 className="text-3xl font-semibold text-white mb-4">WeOffer</h2>
             <p className="mb-4 text-gray-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              lacinia odio vitae vestibulum.
+              At WeOffer, we're dedicated to bringing you the latest in fashion
+              with a touch of excellence. Our curated collections blend style,
+              quality, and comfort to ensure that every piece you choose is a
+              perfect fit for your wardrobe.
             </p>
             <p className="text-gray-500">
-              © 2024 Company Name. All rights reserved.
+              © 2024 WeOffer. All rights reserved. Our commitment is to
+              continuously enhance your shopping experience with innovative
+              designs and exceptional customer service.
             </p>
           </div>
 
@@ -41,7 +43,7 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="/MagicFit"
+                  href="/magicFit"
                   className="hover:text-indigo-400 transition-colors"
                 >
                   MagicFit
@@ -89,7 +91,7 @@ function Footer() {
         {/* Attribution Section */}
         <div className="border-t border-gray-700 pt-6">
           <div className="container mx-auto text-center">
-            <p>&copy; 2024 MagicFit. All rights reserved.</p>
+            <p>&copy; 2024 WeOffer. All rights reserved.</p>
           </div>
         </div>
       </div>

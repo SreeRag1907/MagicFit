@@ -15,18 +15,19 @@ function FeaturedProducts() {
   };
 
   return (
-    <section className="py-12 bg-gray-50 relative">
-      <div className="container mx-auto">
-        {/* View More Link */}
-        <div className="absolute right-4">
-          <Link to="/products">
-            <Button size="sm" variant="outline" className="text-indigo-600">
-              View More <ArrowRight/>   
-            </Button>
+    <section className="py-12 relative">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center mb-8">
+          <h2 className="text-4xl font-bold">Featured Products</h2>
+          <Link
+            to="/products"
+            className="flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-300"
+          >
+            <span className="text-sm font-semibold mr-2">View More</span>
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
-        
-        <h2 className="text-4xl font-bold text-center mb-8">Featured Products</h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.slice(0, 4).map((product) => (
             <div
@@ -50,9 +51,9 @@ function FeaturedProducts() {
                 </p>
                 <div className="mt-4 w-full flex justify-center gap-5">
                   <Link to={`/product-details/${product.id}`}>
-                  <Button size="sm" variant="outline">
-                    View
-                  </Button>
+                    <Button size="sm" variant="outline">
+                      View
+                    </Button>
                   </Link>
                   <Button size="sm" onClick={() => handleAddToCart(product)}>
                     Add to Cart
