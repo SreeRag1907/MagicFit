@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import Header from "@/components/custom/header/Header";
 import { Button } from "@/components/ui/button";
 import { Shirt } from "lucide-react";
-
 import { Link } from "react-router-dom";
 import FeaturedProducts from "@/components/custom/featuredProducts/FeaturedProducts";
 import Testimonials from "@/components/custom/testimonials/Testimonials";
@@ -11,7 +10,6 @@ import Footer from "@/components/custom/footer/Footer";
 import Gallery from "@/components/custom/gallery/Gallery";
 
 const Home = () => {
-  
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isExiting, setIsExiting] = useState(false);
 
@@ -32,8 +30,6 @@ const Home = () => {
 
     return () => clearInterval(intervalId);
   }, [images.length]);
-
-  
 
   return (
     <div>
@@ -57,14 +53,14 @@ const Home = () => {
               </Button>
             </Link>
           </div>
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 bg-gray-50 rounded-2xl">
+          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-full bg-gray-50 rounded-2xl overflow-hidden">
             <div
               className={`relative transition-opacity duration-1000 ${
                 isExiting ? "opacity-0" : "opacity-100"
               }`}
             >
               <img
-                className="object-contain object-center w-full h-[600px]  transform hover:scale-105 transition-transform duration-500"
+                className="object-contain w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] transform hover:scale-105 transition-transform duration-500"
                 src={images[currentImageIndex]}
                 alt={`Image ${currentImageIndex + 1}`}
               />
@@ -72,11 +68,10 @@ const Home = () => {
           </div>
         </div>
       </section>
-              <FeaturedProducts/>
-              <Gallery/>
-              <Testimonials/>
-              <Footer/>
-      {/* <Products/> */}
+      <FeaturedProducts />
+      <Gallery />
+      <Testimonials />
+      <Footer />
     </div>
   );
 };
